@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,6 +12,9 @@
 		4B0181F522ADD83600726600 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B0181F322ADD83600726600 /* Main.storyboard */; };
 		4B0181F722ADD83A00726600 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B0181F622ADD83A00726600 /* Assets.xcassets */; };
 		4B0181FA22ADD83A00726600 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B0181F822ADD83A00726600 /* LaunchScreen.storyboard */; };
+		4B01CCA122B27D160037320A /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B01CCA022B27D160037320A /* ViewController2.swift */; };
+		4B01CCA322B27DAB0037320A /* ViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B01CCA222B27DAB0037320A /* ViewController3.swift */; };
+		4B01CCA522B285440037320A /* ViewController4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B01CCA422B285440037320A /* ViewController4.swift */; };
 		7C08BB37984DCF91B7EC739F /* Pods_kuyakucounter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE808AE7CFDEEC4506121689 /* Pods_kuyakucounter.framework */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +27,9 @@
 		4B0181F622ADD83A00726600 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4B0181F922ADD83A00726600 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4B0181FB22ADD83A00726600 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B01CCA022B27D160037320A /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
+		4B01CCA222B27DAB0037320A /* ViewController3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController3.swift; sourceTree = "<group>"; };
+		4B01CCA422B285440037320A /* ViewController4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController4.swift; sourceTree = "<group>"; };
 		B4D944C4D3AE67E8961F3991 /* Pods-kuyakucounter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kuyakucounter.release.xcconfig"; path = "Target Support Files/Pods-kuyakucounter/Pods-kuyakucounter.release.xcconfig"; sourceTree = "<group>"; };
 		FE808AE7CFDEEC4506121689 /* Pods_kuyakucounter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kuyakucounter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -46,7 +52,6 @@
 				24669D12D042CD9DA6DDB926 /* Pods-kuyakucounter.debug.xcconfig */,
 				B4D944C4D3AE67E8961F3991 /* Pods-kuyakucounter.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -73,10 +78,13 @@
 			children = (
 				4B0181EF22ADD83600726600 /* AppDelegate.swift */,
 				4B0181F122ADD83600726600 /* ViewController.swift */,
+				4B01CCA022B27D160037320A /* ViewController2.swift */,
+				4B01CCA222B27DAB0037320A /* ViewController3.swift */,
 				4B0181F322ADD83600726600 /* Main.storyboard */,
 				4B0181F622ADD83A00726600 /* Assets.xcassets */,
 				4B0181F822ADD83A00726600 /* LaunchScreen.storyboard */,
 				4B0181FB22ADD83A00726600 /* Info.plist */,
+				4B01CCA422B285440037320A /* ViewController4.swift */,
 			);
 			path = kuyakucounter;
 			sourceTree = "<group>";
@@ -206,6 +214,9 @@
 			files = (
 				4B0181F222ADD83600726600 /* ViewController.swift in Sources */,
 				4B0181F022ADD83600726600 /* AppDelegate.swift in Sources */,
+				4B01CCA322B27DAB0037320A /* ViewController3.swift in Sources */,
+				4B01CCA122B27D160037320A /* ViewController2.swift in Sources */,
+				4B01CCA522B285440037320A /* ViewController4.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
