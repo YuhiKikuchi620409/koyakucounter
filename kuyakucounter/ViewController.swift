@@ -18,16 +18,24 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var bannerView: GADBannerView!
     
+  
+    @IBOutlet weak var bannerView2: GADBannerView!
+ 
     
-    @IBOutlet weak var bannreView2: GADBannerView!
-    
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"    //<-追加
-        bannerView.rootViewController = self   //<-追加
+        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerView.rootViewController = self
         bannerView.load(GADRequest())
+        
+        bannerView2.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerView2.rootViewController = self
+        bannerView2.load(GADRequest())
+        
+        
         
     }
     
@@ -71,9 +79,6 @@ class ViewController: UIViewController {
         setTextInt(countText4, countArray[3])
         setTextInt(countText5, countArray[4])
 
-        
-        
-//        StartText.text = String(countArray[6])
         StartText.text = ""
         NowText.text = ""
         goukeiLabel.text = String(countArray[8])
@@ -91,7 +96,16 @@ class ViewController: UIViewController {
         
     }
     
-    var countArray: [Int] = [0,0,0,0,0,0,0,0]
+    override func viewDidAppear(_ animated: Bool) {
+        //ボタンを丸くする
+        greenButton.layer.cornerRadius = greenButton.bounds.height/2
+        redButton.layer.cornerRadius = redButton.bounds.height/2
+        yellowButton.layer.cornerRadius = yellowButton.bounds.height/2
+        buleButton.layer.cornerRadius = buleButton.bounds.height/2
+        pinkButton.layer.cornerRadius = pinkButton.bounds.height/2
+        
+    }
+    var countArray: [Int] = [0,0,0,0,0,0,0,0,0]
     var kakurituArray : [Double] = [0,0,0,0,0]
     
      var count = 0
@@ -115,6 +129,16 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var kakurituLabel5: UILabel!
     
+//    ボタン
+    @IBOutlet weak var greenButton: UIButton!
+    
+    @IBOutlet weak var redButton: UIButton!
+    
+    @IBOutlet weak var yellowButton: UIButton!
+    
+    @IBOutlet weak var buleButton: UIButton!
+    
+    @IBOutlet weak var pinkButton: UIButton!
     
     
     @IBAction func goukei(_ sender: Any) {
@@ -129,7 +153,6 @@ class ViewController: UIViewController {
         if startNum != nil && nowNum != nil && nowNum! >= startNum!{
             
             countArray[6] = startNum!
-            
             countArray[7] = nowNum!
             
             
@@ -151,7 +174,7 @@ class ViewController: UIViewController {
             
             kakurituArray[0] = result2
             
-            var shousuuten1 = result2
+            let shousuuten1 = result2
             
             let shousuuten1Floor = floor(shousuuten1*100)/100
             
@@ -173,10 +196,9 @@ class ViewController: UIViewController {
             let result3: Double = Double(goukei2Num! / count2Num!)
             
             
-            
             kakurituArray[1] = result3
             
-            var shousuuten2 = result3
+            let shousuuten2 = result3
             
             let shousuuten2Floor = floor(shousuuten2*100)/100
             
@@ -196,7 +218,7 @@ class ViewController: UIViewController {
             
             kakurituArray[2] = result4
             
-            var shousuuten3 = result4
+            let shousuuten3 = result4
             
             let shousuuten3Floor = floor(shousuuten3*100)/100
             
@@ -217,7 +239,7 @@ class ViewController: UIViewController {
             
             kakurituArray[3] = result5
             
-            var shousuuten4 = result5
+            let shousuuten4 = result5
             
             let shousuuten4Floor = floor(shousuuten4*100)/100
             
@@ -236,7 +258,7 @@ class ViewController: UIViewController {
             
             kakurituArray[4] = result6
             
-            var shousuuten5 = result6
+            let shousuuten5 = result6
             
             let shousuuten5Floor = floor(shousuuten5*100)/100
             
@@ -305,7 +327,10 @@ class ViewController: UIViewController {
         countArray[0] += 1
         
         countText.text = String(countArray[0])
-       print(countArray)
+      
+        back1.isHidden = false
+        back1.flash(withDuration: 0.1, interval: 0.2)
+        {self.back1.isHidden = true}
     }
     
     var count2: Int = 0
@@ -314,6 +339,10 @@ class ViewController: UIViewController {
         
         countArray[1] += 1
         countText2.text = String(countArray[1])
+        
+        back2.isHidden = false
+        back2.flash(withDuration: 0.1, interval: 0.2)
+        {self.back2.isHidden = true}
     }
     
     var count3: Int = 0
@@ -322,6 +351,11 @@ class ViewController: UIViewController {
         
         countArray[2] += 1
         countText3.text = String(countArray[2])
+        
+        back3.isHidden = false
+        back3.flash(withDuration: 0.1, interval: 0.2)
+        {self.back3.isHidden = true}
+        
     }
     
     var count4: Int = 0
@@ -329,6 +363,11 @@ class ViewController: UIViewController {
     @IBAction func button4(_ sender: Any) {
         countArray[3] += 1
         countText4.text = String(countArray[3])
+        
+        back4.isHidden = false
+        back4.flash(withDuration: 0.1, interval: 0.2)
+        {self.back4.isHidden = true}
+        
     }
     
     var count5: Int = 0
@@ -336,23 +375,32 @@ class ViewController: UIViewController {
     @IBAction func button5(_ sender: Any) {
         countArray[4] += 1
         countText5.text = String(countArray[4])
+        
+        back5.isHidden = false
+        back5.flash(withDuration: 0.1, interval: 0.2)
+        {self.back5.isHidden = true}
+        
     }
     
 
+    
+    
     @IBAction func longPress1(_ sender: Any) {
-        countText.text = "0"
+    countText.text = "0"
         kakurituLabel.text = "0"
         countArray[0]  = 0
     }
     
+  
     @IBAction func longPress2(_ sender: Any) {
-        countText2.text = "0"
+    countText2.text = "0"
         kakurituLabel2.text = "0"
         countArray[1]  = 0
     }
     
+
     @IBAction func longPress3(_ sender: Any) {
-        countText3.text = "0"
+    countText3.text = "0"
         kakurituLabel3.text = "0"
         countArray[2]  = 0
     }
@@ -362,13 +410,37 @@ class ViewController: UIViewController {
         kakurituLabel4.text = "0"
         countArray[3]  = 0
     }
+
     @IBAction func longPress5(_ sender: Any) {
-        countText5.text = "0"
+    countText5.text = "0"
         kakurituLabel5.text = "0"
         countArray[4]  = 0
     }
     
+    @IBOutlet weak var back1: UIView!
+    
+    @IBOutlet weak var back2: UIView!
+    
+    @IBOutlet weak var back3: UIView!
+    
+    @IBOutlet weak var back4: UIView!
+    
+    @IBOutlet weak var back5: UIView!
+    
 }
 
+//ボタンを押したらフラッシュさせる
+//extension UIView {
+//    func flash(withDuration: TimeInterval, delay: TimeInterval = 0.0, interval: TimeInterval, after:(() -> Void)? = nil) {
+//        UIView.animate(withDuration: withDuration, delay: delay, options: .repeat, animations: {
+//            self.alpha = 0.0
+//        }, completion: nil)
+//        
+//        Timer.scheduledTimer(withTimeInterval: interval, repeats: false) { (_) in
+//            self.alpha = 1.0
+//            after?()
+//        }
+//    }
+//}
 
 
